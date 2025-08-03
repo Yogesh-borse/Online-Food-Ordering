@@ -1,0 +1,129 @@
+# Recreating the resume with updated Work Experience section
+
+pdf = FPDF()
+pdf.set_auto_page_break(auto=True, margin=15)
+pdf.add_page()
+
+# Header
+pdf.set_font("Arial", style='B', size=16)
+pdf.cell(200, 10, "Yogesh Madhukar Borse", ln=True, align='C')
+pdf.ln(5)
+
+# Contact Information
+pdf.set_font("Arial", size=12)
+pdf.cell(200, 10, "Nashik, Maharashtra | yogeshborse422@gmail.com | 9529417245", ln=True, align='C')
+pdf.ln(10)
+
+# Personal Details
+pdf.set_font("Arial", style='B', size=14)
+pdf.cell(0, 10, "Personal Details", ln=True)
+pdf.set_font("Arial", size=12)
+personal_details = [
+    "Date of Birth: 25th August 1999",
+    "Gender: Male",
+    "State: Maharashtra",
+    "Nationality: Indian",
+    "Marital Status: Unmarried"
+]
+for detail in personal_details:
+    pdf.cell(0, 7, detail, ln=True)
+pdf.ln(5)
+
+# Education
+pdf.set_font("Arial", style='B', size=14)
+pdf.cell(0, 10, "Education", ln=True)
+pdf.set_font("Arial", size=12)
+education = [
+    "Diploma in Mechanical Engineering (2021) - R. C. Patel Polytechnic, Shirpur",
+    "Percentage: 68.50%",
+    "Higher Secondary (12th Science) - R. C. Patel Mahavidyalaya, Bhamapur (2018)",
+    "Secondary School (10th) - R. C. Patel Secondary School, Shirpur (2016)"
+]
+for edu in education:
+    pdf.cell(0, 7, edu, ln=True)
+pdf.ln(5)
+
+# Work Experience (Updated)
+pdf.set_font("Arial", style='B', size=14)
+pdf.cell(0, 10, "Professional Experience", ln=True)
+pdf.set_font("Arial", style='B', size=12)
+pdf.cell(0, 7, "Mechanical Fitment - Lucy Electronic India Pvt Ltd, Nashik (May 2022 - December 2022)", ln=True)
+pdf.set_font("Arial", size=12)
+pdf.multi_cell(0, 7, "- Performed mechanical assembly and fitment of electrical components.\n"
+                     "- Ensured precision alignment and safety compliance in assembly processes.\n"
+                     "- Conducted quality checks to maintain industry standards.")
+pdf.ln(3)
+
+pdf.set_font("Arial", style='B', size=12)
+pdf.cell(0, 7, "Team Leader - Bedmutha Industries Ltd, Maharashtra (2022 - 2023)", ln=True)
+pdf.set_font("Arial", size=12)
+pdf.multi_cell(0, 7, "- Supervised a team in production and quality control operations.\n"
+                     "- Monitored manufacturing processes to improve efficiency.\n"
+                     "- Provided technical guidance to enhance production workflow.")
+pdf.ln(3)
+
+pdf.set_font("Arial", style='B', size=12)
+pdf.cell(0, 7, "Quality Assurance Engineer - Gestamp Automotive India Pvt Ltd, Pune (2023 - 2024)", ln=True)
+pdf.set_font("Arial", size=12)
+pdf.multi_cell(0, 7, "- Conducted quality inspections and ensured compliance with automotive industry standards.\n"
+                     "- Implemented corrective actions to reduce product defects.\n"
+                     "- Assisted in process optimization to improve production efficiency.")
+pdf.ln(3)
+
+pdf.set_font("Arial", style='B', size=12)
+pdf.cell(0, 7, "SAP MM Consultant (Material Management) - CIE Automotive India, Nashik (2025 - Present)", ln=True)
+pdf.set_font("Arial", size=12)
+pdf.multi_cell(0, 7, "- Managing SAP MM (Material Management) modules for inventory and procurement.\n"
+                     "- Optimizing supply chain and material workflows to enhance productivity.\n"
+                     "- Coordinating with cross-functional teams for system improvements.")
+pdf.ln(5)
+
+# Technical Skills
+pdf.set_font("Arial", style='B', size=14)
+pdf.cell(0, 10, "Technical Skills", ln=True)
+pdf.set_font("Arial", size=12)
+skills = [
+    "Problem Solving & Technical Troubleshooting",
+    "Hands-on Experience with Mechanical Systems & Machinery",
+    "Quality Control & Assurance",
+    "Production & Maintenance",
+    "Teamwork, Leadership & Collaboration",
+    "SAP MM Software Knowledge",
+    "Attention to Detail & Creativity"
+]
+for skill in skills:
+    pdf.cell(0, 7, skill, ln=True)
+pdf.ln(5)
+
+# Projects
+pdf.set_font("Arial", style='B', size=14)
+pdf.cell(0, 10, "Project Work", ln=True)
+pdf.set_font("Arial", size=12)
+pdf.cell(0, 7, "Solar Water Distillation System", ln=True)
+pdf.multi_cell(0, 7, "Designed and implemented a solar-powered water distillation system to provide "
+                     "clean and sustainable drinking water. Focused on energy efficiency and cost-effectiveness.")
+pdf.ln(5)
+
+# Languages
+pdf.set_font("Arial", style='B', size=14)
+pdf.cell(0, 10, "Languages", ln=True)
+pdf.set_font("Arial", size=12)
+languages = ["Marathi - Native", "Hindi - Fluent", "English - Professional Proficiency"]
+for lang in languages:
+    pdf.cell(0, 7, lang, ln=True)
+pdf.ln(5)
+
+# Personal Strengths
+pdf.set_font("Arial", style='B', size=14)
+pdf.cell(0, 10, "Personal Strengths", ln=True)
+pdf.set_font("Arial", size=12)
+strengths = [
+    "Self-Confidence & Tolerance Ability",
+    "Independent Working Ability",
+    "Leadership & Team Management",
+    "Technical Problem-Solving"
+]
+for strength in strengths:
+    pdf.cell(0, 7, strength, ln=True)
+pdf.ln(5)
+
